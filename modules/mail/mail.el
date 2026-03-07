@@ -34,4 +34,4 @@
   (setq message-default-mail-headers "Cc: \nBcc: \n") ;; Always show BCC
   (setq notmuch-always-prompt-for-sender 't))
 
-(provide 'mail-config)
+(provide 'mail-mail)

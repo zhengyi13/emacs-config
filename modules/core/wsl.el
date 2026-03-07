@@ -12,4 +12,4 @@
             browse-url-browser-function 'browse-url-generic
             search-web-default-browser 'browse-url-generic))))
 
-(provide 'wsl-config)
+(provide 'core-wsl)

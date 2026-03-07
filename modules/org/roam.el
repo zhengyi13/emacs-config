@@ -57,4 +57,4 @@
           org-roam-ui-update-on-save t
           org-roam-ui-open-on-start t))
 
-(provide 'org-roam-config)
+(provide 'org-roam)

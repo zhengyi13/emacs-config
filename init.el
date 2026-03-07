@@ -26,27 +26,23 @@
   (when (file-exists-p core-loader)
     (load core-loader nil 'nomessage)))
 
-;; load locally-modularized files
-(add-to-list 'load-path "/home/zhengyi/dotfiles/.emacs.d")
-(require 'main-config)          ;; Main: basic settings like scrollbars, etc...
-(require 'keybindings-config)   ;; TODO: make this do more than load general.el
-(require 'ui-config)            ;; UI: Appearance and Ergonomics (which-key, avy, ace-jump)
-;;(require 'mail-config)          ;; setup mu4e, notmuch
+;; Configuration
+(jbm/load-module 'core 'config 'misc)
+(jbm/load-module 'keybindings 'keybindings)
+(jbm/load-module 'ui 'ui 'fzf)
 
-;; Modularized features
+;; Features
 (jbm/load-module 'completion 'autocomplete)
 (jbm/load-module 'lsp 'lsp)
 (jbm/load-module 'git 'git)
-(jbm/load-module 'ui 'fzf)
-(jbm/load-module 'lang 'go)
-(jbm/load-module 'lang 'python)
-(jbm/load-module 'lang 'lua)
-(jbm/load-module 'lang 'yaml)
-(jbm/load-module 'lang 'terraform)
+(jbm/load-module 'org 'roam)
+;; (jbm/load-module 'mail 'mail)
 
-(require 'miscellaneous-config) ;; All the stuff that's not otherwise obviously for elsewhere
-(require 'org-roam-config)      ;; Org and Org-Roam
-;; (require 'wsl-config)           ;; WSL-relevant config
+;; Languages
+(jbm/load-module 'lang 'go 'python 'lua 'yaml 'terraform)
+
+;; OS Specific
+(jbm/load-module 'core 'wsl)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.

@@ -30,4 +30,4 @@
 (use-package journalctl-mode)
 
 
-(provide 'miscellaneous-config)
+(provide 'core-misc)

@@ -5,14 +5,15 @@
 
 ;;; Code:
 
-(defun jbm/load-module (category module)
-  "Load a MODULE from a CATEGORY within the modules directory.
+(defun jbm/load-module (category &rest modules)
+  "Load one or more MODULES from a CATEGORY within the modules directory.
 CATEGORY is a symbol representing the subdirectory in ~/.emacs.d/modules/.
-MODULE is a symbol representing the file name (without .el extension)."
-  (let ((file (expand-file-name (format "modules/%s/%s.el" category module) user-emacs-directory)))
-    (if (file-exists-p file)
-        (load file nil 'nomessage)
-      (message "Module not found: %s/%s" category module))))
+MODULES is a list of symbols representing the file names (without .el extension)."
+  (dolist (module modules)
+    (let ((file (expand-file-name (format "modules/%s/%s.el" category module) user-emacs-directory)))
+      (if (file-exists-p file)
+          (load file nil 'nomessage)
+        (message "Module not found: %s/%s" category module)))))
 
 (provide 'core)
 ;;; core.el ends here
