@@ -1,0 +1,1 @@
+(setq manual-test-loaded t)
