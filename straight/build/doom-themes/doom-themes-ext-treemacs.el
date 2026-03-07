@@ -1,0 +1,1 @@
+/home/zhengyi/.emacs.d/straight/repos/themes/extensions/doom-themes-ext-treemacs.el

@@ -1,0 +1,1 @@
+/home/zhengyi/.emacs.d/straight/repos/magit/docs/AUTHORS.md

@@ -1,0 +1,1 @@
+/home/zhengyi/.emacs.d/straight/repos/nerd-icons-completion/nerd-icons-completion.el

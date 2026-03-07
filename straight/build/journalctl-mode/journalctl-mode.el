@@ -1,0 +1,1 @@
+/home/zhengyi/.emacs.d/straight/repos/journalctl-mode/journalctl-mode.el

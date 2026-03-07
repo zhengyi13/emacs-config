@@ -36,7 +36,6 @@
 (jbm/load-module 'lsp 'lsp)
 (jbm/load-module 'git 'git)
 (jbm/load-module 'org 'roam)
-;; (jbm/load-module 'mail 'mail)
 
 ;; Languages
 (jbm/load-module 'lang 'go 'python 'lua 'yaml 'terraform)

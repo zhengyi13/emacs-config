@@ -1,0 +1,1 @@
+/home/zhengyi/.emacs.d/straight/repos/lsp-mode/clients/lsp-ts-query.el
