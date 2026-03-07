@@ -3,6 +3,9 @@
 ;; https://github.com/noctuid/general.el#use-package-keywords for
 ;; fuller usage/examples. Not fully implemented in here currently, but
 ;; a future improvement for me to work on.
-(use-package general)
+(use-package general
+  :config
+  (general-define-key
+   "C-c t" 'eat))
 
 (provide 'keybindings-keybindings)

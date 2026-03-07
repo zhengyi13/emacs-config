@@ -10,7 +10,12 @@
 	`((".*" ,(no-littering-expand-var-file-name "auto-save/") t)))
   (no-littering-theme-backups))
 
-(use-package vterm)
+(use-package eat
+  :hook (eat-mode . with-editor-export-editor)
+  :config
+  (setq eat-kill-buffer-on-exit t)
+  (eat-eshell-mode)
+  (eat-eshell-visual-command-mode))
 
 (use-package elfeed
   :bind ("C-c w" . elfeed)
