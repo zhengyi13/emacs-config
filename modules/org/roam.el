@@ -17,7 +17,24 @@
   (org-roam-directory "~/notes")
   (org-roam-dailies-directory "daily/")
   (org-roam-completion-everywhere t)
-  (org-return-follows-link t)
+  (org-roam-return-follows-link t)
+  (org-roam-capture-templates
+     '(("n" "Note" plain "%?"
+        :target (file+head "%<%Y%m%d%H%M%S>-${slug}.org"
+                           "#+title: ${title}\n")
+        :unnarrowed t)
+       ("e" "Eskrima" plain "%?"
+        :target (file+head "%<%Y%m%d%H%M%S>-${slug}.org"
+                           "#+title: ${title}\n#+filetags: :eskrima:\n\n* Concept\n* Drills/Application")
+        :unnarrowed t)
+       ("c" "Clover/Work" plain "%?"
+        :target (file+head "%<%Y%m%d%H%M%S>-${slug}.org"
+                           "#+title: ${title}\n#+filetags: :clover:work:\n\n* Context\n* Implementation/Notes")
+        :unnarrowed t)
+       ("f" "Firearms Drill" plain "%?"
+        :target (file+head "%<%Y%m%d%H%M%S>-${slug}.org"
+                           "#+title: ${title}\n#+filetags: :firearms:drill:\n\n* Standards\n* Gear\n* Range Notes")
+        :unnarrowed t)))
   (org-roam-dailies-capture-templates
      '(("d" "Journal" plain "* %? "
         :if-new (file+head+olp "%<%Y-%m-%d>.org"
