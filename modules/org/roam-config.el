@@ -37,13 +37,13 @@
         :unnarrowed t)))
   (org-roam-dailies-capture-templates
      '(("d" "Journal" plain "* %? "
-        :if-new (file+head+olp "%<%Y-%m-%d>.org"
-			       "#+title: %<%Y-%m-%d>\n#+filetags: %<:%Y:%B:>\n"
-			       ("Journal\n\n* Notes \n\n* Questions")))
+        :target (file+head+olp "%<%Y-%m-%d>.org"
+                               "#+title: %<%Y-%m-%d>\n#+filetags: %<:%Y:%B:>\n\n* Journal\n\n* Notes \n\n* Questions"
+                               ("Journal")))
        ("t" "TODOs" entry "\n* TODO %? :mit:"
-        :if-new (file+head+olp "%<%Y-%m-%d>.org"
-			       "#+title: %<%Y-%m-%d>\n#+filetags: %<:%Y:%B:todos:>\n"
-			       ("TODOs")))))
+        :target (file+head+olp "%<%Y-%m-%d>.org"
+                               "#+title: %<%Y-%m-%d>\n#+filetags: %<:%Y:%B:todos:>\n\n* TODOs"
+                               ("TODOs")))))
   :bind
   ("C-c o d" . org-roam-dailies-goto-today)
   ("C-c n l" . org-roam-buffer-toggle)
@@ -74,4 +74,4 @@
           org-roam-ui-update-on-save t
           org-roam-ui-open-on-start t))
 
-(provide 'org-roam)
+(provide 'org-roam-config)

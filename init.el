@@ -35,7 +35,7 @@
 (jbm/load-module 'completion 'autocomplete)
 (jbm/load-module 'lsp 'lsp)
 (jbm/load-module 'git 'git)
-(jbm/load-module 'org 'roam)
+(jbm/load-module 'org 'roam-config)
 
 ;; Languages
 (jbm/load-module 'lang 'go 'python 'lua 'yaml 'terraform)
