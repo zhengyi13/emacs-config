@@ -1,5 +1,0 @@
-/home/zhengyi/.emacs.d/straight/build/vterm/build/CMakeFiles/vterm-module.dir
-/home/zhengyi/.emacs.d/straight/build/vterm/build/CMakeFiles/libvterm.dir
-/home/zhengyi/.emacs.d/straight/build/vterm/build/CMakeFiles/run.dir
-/home/zhengyi/.emacs.d/straight/build/vterm/build/CMakeFiles/edit_cache.dir
-/home/zhengyi/.emacs.d/straight/build/vterm/build/CMakeFiles/rebuild_cache.dir

@@ -29,7 +29,7 @@
 ;; Configuration
 (jbm/load-module 'core 'config 'misc)
 (jbm/load-module 'keybindings 'keybindings)
-(jbm/load-module 'ui 'ui 'fzf)
+(jbm/load-module 'ui 'ui 'fzf 'rg-config)
 
 ;; Features
 (jbm/load-module 'completion 'autocomplete)

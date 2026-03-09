@@ -1,1 +1,0 @@
-/home/zhengyi/.emacs.d/straight/repos/yaml.el/yaml.el
